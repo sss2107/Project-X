@@ -1,0 +1,99 @@
+Application Name,Application Description,Status,Plan,"Replacement App
+ (If Plan = Replace)",Criticality,Critical Functions,BACA Availability Rating,BACA Severity Level,Pen Test (Y/N),Pen Test Last Performed Date (DDMMYY),SOD (Y/N),App Type,Developed,Owner,Business Function,Sub Function,App IT Owner,App Business Owner,Product Owner,Scrum Master,SIA ITD POC,L1 Support Lead,L2 Support Lead,Primary Technology,Platform Vendor,Platform,Platform Version,No. of Servers,Server Type,VPN Tunnel (Y/N),VPN Type,Access Management Tool(s),Who handle Access Management,# of Users ,Run Book/Ops Doc Location,"# of Inbound
+Interfaces","Inbound
+Source Apps","# of Outbound
+Interfaces","Outbound
+Destination Apps",Interface Method,"# of Batch/
+Scheduled Jobs",No. of Licenses,License Start Date,License End Date,Maintenance Contract Start Date,Maintenance Contract End Date,"Comments
+"
+EIDS,Engineering Info Display System ==>editing tool to manage the Flight Information received from SAP and FIDS - 48 hrs (24 hrs back and 24 hrs ahead),Active,Go Forward,,Mission Critical,,Cat 2: 99.5% and 24x7,Sev 2,Y - only after cloud migration,,Y,Client Server,In House,Business ,LMD,Execution,Lian Choan Kiat,Royce Yeo,,,Yogalakshmi M,Sriram N,Balakumar R,"Java_1.6
+IIS Web Server
+Weblogic 12c app server
+Oracle 12c Database
+EJB
+Web Service (SOAP)",IBM,Unix,AIX 7.1,2,On Premise,Y,,Access Management,Business,500,,3,"SAP
+FIDS
+AIRCOM",6,"Smart MX (via ODG)
+eOHF
+DRAM
+ACMA
+Baywatch
+eCAMS","SFTP, MQ, TCP, SMTP",,,,,,,Application will be re-platformed from AIX OS to AWS cloud and DB migration from Oracle 12c to Aurora MySQL
+EOCC,Enhanced Operations Control Centre,Active,Go Forward,,Mission Critical,"Allocation of manpower to tasks
+Flight Schedule from EIDS and OCCS
+Shift & Leave information from MyHR",Cat 2: 99.5% and 24x7,Sev 2,N,,In App,Web,In House,EC & ED,LMD,Execution,Lian Choan Kiat,Albert Lau,Kek Wei Siong,Marcus Tay,Yogalakshmi M,Sriram N,Project Team/Balakumar,"AWS_Aurora_MySQL, Java_1.8
+Jboss_EAP_7.2 
+ReactJS_17.0 Spring_Boot_2.4",AWS,Redhat Linux,7.9,Two ec2 instance,Cloud,Y,Site-to-Site,Internal,Business,approx 50,Need to check with TCS,4,"JPP
+SIS (MyMint)
+OCCS
+MyHR (via ODG)",1,SmartMX (via ODG),"SQS, IBM MQ, SFTP (Tumbleweed)",Need to check with TCS,,,,AMS (SIA Master Agreeement),AMS (SIA Master Agreeement),
+DRAM,DRAM is used to allocate and manage resources based on the flight information provided by EIDS. ,Active,Replace,EOCC-WAT,Mission Critical,Manpower assignment,Cat 2: 99.5% and 24x7,Sev 2,Y - only after cloud migration,,Y,Client Server,In House,Business ,LMD,Execution,Lian Choan Kiat,Royce Yeo,,,Yogalakshmi M,Sriram N,Balakumar R,"Java_1.6
+IIS Web Server
+Weblogic 12c app server
+Oracle 12c Database
+EJB
+Web Service (SOAP)",IBM,Unix,AIX 7.1,2,On Premise,Y,,Access Management,Business,250,,,CAMS,1,Smart MX (via ODG),MQ,,,,,,,Application will be re-platformed from AIX OS to AWS cloud and DB migration from Oracle 12c to Aurora MySQL
+ACMA,Application for aircraft status and towing alert,Active,Replace,EOCC-SAR,Mission Critical,Towing schedule,Cat 2: 99.5% and 24x7,Sev 2,Y - only after cloud migration,,Y,Web,In House,Business ,LMD,Execution,Lian Choan Kiat,Royce Yeo,,,Yogalakshmi M,Sriram N,Balakumar R,Java,IBM,Windows,Windows 2016,2,On Premise,Y,,,Business,100,,,,0,Nil,,,,,,,,Application will be re-platformed from AIX OS to AWS cloud and DB migration from Oracle 12c to Aurora MySQL
+eOHF,Application for record of equipment usage,Active,Replace,eDCO,Mission Critical,Record usage of equipment,Cat 2: 99.5% and 24x7,Sev 2,Y - only after cloud migration,,Y,Web,In House,Business ,LMD,Execution,Lian Choan Kiat,Royce Yeo,,,Yogalakshmi M,Sriram N,Balakumar R,Java,IBM,Windows,Windows 2016,2,On Premise,Y,,Access Management,Business,100,,,EIDS,0,Nil,,,,,,,,Application will be re-platformed from AIX OS to AWS cloud and DB migration from Oracle 12c to Aurora MySQL
+Baywatch,Application to display aircraft bay location,Active,Replace,EOCC-SAR,Mission Critical,View aircraft bay location,Cat 2: 99.5% and 24x7,Sev 2,Y - only after cloud migration,,Y,Web,In House,Business ,LMD,Execution,Lian Choan Kiat,Royce Yeo,,,Yogalakshmi M,Sriram N,Balakumar R,Java,IBM,Windows,Windows 2016,2,On Premise,Y,,,Business,500,,2,"EIDS
+AMIS",0,Nil,,,,,,,,Application will be re-platformed from AIX OS to AWS cloud and DB migration from Oracle 12c to Aurora MySQL
+Smart MX,Engineers' App,Active,Go Forward,,Mission Critical,"View assignment
+View AMM
+View provisional fuel
+Serviceability update",Cat 2: 99.5% and 24x7,Sev 2,Y,XXXX20,N,Mobile,In House,EC & Vendor,LMD,Execution,Lian Choan Kiat,Albert Lau,Kek Wei Siong,Yogalakshmi M,Yogalakshmi M,Sriram N,Aiswarya J,"iOS
+Java_1.8
+Spring_Boot_2.7
+Openshift",Apple,iOS,15.X,2,Cloud,Y,Site-to-Site,Airwatch,IT,200,https://siaconfluence.sq.com.sg:8190/display/SmartMx/,12,"SAP, SAP (via ODG)
+EIDS (via ODG)
+OCCS (via ODG)
+DRAM (via ODG)
+EOCC-WAT (via ODG)
+CAMS (via ODG)
+TLS
+DIME
+eDCO (via ODG)
+LSQ (via ODG)
+ALTEA (via ODG)",3,"eSQ (via ODG)
+eDCO (via ODG)
+EOCC-WAT (via ODG)",MQ,1,,,,"AMC: 1-Nov-21
+AMS (SIA Master Agreeement)","AMC: 31-Oct-24
+AMS (SIA Master Agreeement)",
+eDCO,Electronice Document & Capacity Optimiser,Active,Go Forward,,Mission Critical,Electronic task cards,Cat 1: 99.93% and 24x7,Sev 2,N,,In App,Web,In House,Business ,LMD,Execution,Lian Choan Kiat,Wang Yong Qiang,Simon Mok,Chen Yen Hin,Yogalakshmi M,Sriram N,Project Team,"AWS_Aurora_MySQL, Java_1.8
+Jboss_EAP_7.2 
+ReactJS_17.0 Spring_Boot_2.4
+aws_ec2",AWS,Redhat Linux,7.9,Two ec2 instance,Cloud,Y,Site-to-Site,Internal,Business,approx 20,eDCO - eDCO - Confluence (sq.com.sg),3,"Techlog
+JPP
+SIS",1,Smart MX (via ODG),"AWS SQS, SFTP",,,,,AMS (SIA Master Agreeement),AMS (SIA Master Agreeement),
+PDFTron,PDF SDK,Active,Go Forward,,Mission Critical,PDF task cards annotation,,,,,,,Off the Shelf,Business ,LMD,Execution,Lian Choan Kiat,Wang Yong Qiang,Simon Mok,Chen Yen Hin,,PDFTron,PDFTron,PDF SDK,PDFTron,,,,,N,,,,,,0,,0,,,,1,2021-09-28 00:00:00,Auto renew for 3 years at 12% increase,2021-09-28 00:00:00,Auto renew for 3 years at 12% increase,
+EDEC-JPP,Joint Planning Platform,Active,Go Forward,,Mission Critical,,Cat 2: 99.5% and 24x7,Sev 2,N,,In App,Web,In House,EC & ED,LMD,Planning,Lian Choan Kiat,Wang Yong Qiang,Xin Rui,Dinesh Kumar,Wee Teng Heng,Sriram N,Project Team / Balakumar R,"AWS_Aurora_MySQL, Java_1.8
+ReactJS_17.0 Spring_Boot_2.4",AWS,Redhat Linux,Jboss_EAP_7.2 ,Two ec2 instance,Cloud,Y,Site-to-Site,Internal,Business,~50 (Active),https://siaconfluence.sq.com.sg:8190/display/EDECJPP/Documents,3,"OCCS (via SIA ODG)
+SAP
+CAMS",2,"EOCC
+eDCO-CCP (In-Progress)","MQ - CAMS,SAP,ODG
+SQS - EOCC,eDCO",3,,,,AMS (SIA Master Agreeement),AMS (SIA Master Agreeement),
+ECAMS,Engineering Centralised Aircraft Maintenance System,Active,Go Forward,,Mission Critical,,Cat 2: 99.5% and 24x7,Sev 2,N,,,Web,In House,EC & ED,LMD,Engineering,Lian Choan Kiat,Royce Yeo,,,Yogalakshmi M,Sriram N,Balakumar R,"Spring3.0,Struts2.0,Rest webservice,Oracle12c",DB & APP server- IBM,DB & APP server: Linux,RHEL7,"PROD:
+APP server:2
+DB Servers:2
+NON-Prod:
+APP & DB: 1/1",On Premise,Y,Client-to-Site,,Business,~1000,,8,"SAP
+ECDL
+OCCS
+TCDP
+EIDS
+EIM
+BO
+IFWS",7,"SAP
+ECDL
+EDECJPP
+CEM
+ESQ
+EMAIL(O365)
+SmartMX","MQ
+sFTP
+Email
+web service(Soap & Rest)",14,,,,,,So far Ecams have licence s/w Oracle12c database alone. 
+Digipap,Digitisation of Paperwork,Active,Go Forward,,Mission Critical,,Cat 2: 99.5% and 24x7,,N,,In App,Web,In House,Business ,LMD-CSD,Engineering,Lian Choan Kiat,Tan Chuan Ching / Jake,Karen Zhuo / Desmond Sim,Han Myo Htwe / Dinesh Kumar,Yogalakshmi M,Shanto George,Vishnu Madhira,"Java, ReactJS, MySQL",TCS,"Java Platform (J2EE),ReactJS,MySQL","jdk1.8,React17.0.2",2,Cloud,Y,Site-to-Site,Internal,Business,,https://siaconfluence.sq.com.sg:8190/display/DigiPap/DigiPaper+Home,3,"SAP, SIS, SmartMx",3,"SAP, SIS, SmartMx","IBM MQ, TIBCO Mashery Gateway (REST/HTTPS)",1,,,,,,
+Digital Automation - Customer Contracts Tracker,Application to track customer contracts,Active,Go Forward,,Normal,,Cat 3: 99% and 24x7,,,,,Web,In House,Business ,LMD,Engineering,Ng Jian Long,Soo Mei Mei,Dalton Sze,Ng Jian Long,Ho Liam Kiat,TCS L1,O365 L2 squad,Mircosoft,Microsoft,Microsoft,O365,Version 2206 (Build 15330.20264)	,Cloud,N,,SSO Login,Business,~4000,,0,,0,,,0,~4000,per user per month,per user per year,,,
+PowerApps for FH Stretcher and Oxygen Request,Application to request for FH stretcher and oxygen,Active,Go Forward,,Normal,,Cat 3: 99% and 24x7,,,,,Web,In House,Business ,LMD,Engineering,Ng Jian Long,Albert Lau,Kek Weisiong,Ng Jian Long,Ho Liam Kiat,TCS L1,O365 L2 squad,Mircosoft,Microsoft,Microsoft,O365,Version 2206 (Build 15330.20264)	,Cloud,N,,SSO Login,Business,~4000,,0,,0,,,0,~4000,per user per month,per user per year,,,
+Reduce Vetting & Billing TAT - GSE (RPA),Prepare multiple report files and match of equipment usage information,Active,Go Forward,,Normal,,Cat 2: 99.5% and 24x7,Cat 2: 99.5% and 24x7,N,,,Web,In House,Business ,LMD,Finance,Lang Lang,Simon Mok,Nurazri Muhdazan,Lang Lang,Ho Liam Kiat,TCS L1,RPA L2,RPA,Automation Anywhere,Automation Anywhere,A360-v23,4,Cloud,Y,Client-to-Site,SSO Login,Business,,,3,"Outlook,SAP, EIDS",,,,,1,per bot per year,per bot per year,,,
+Billing and Vetting Generic (RPA),Generate Labour and material report for LMD and subcon report for BMD,Active,Go Forward,,Normal,,Cat 2: 99.5% and 24x7,Cat 2: 99.5% and 24x7,N,,,Web,In House,Business ,LMD,Finance,Lang Lang,Simon Mok,Nurazri Muhdazan,Lang Lang,Ho Liam Kiat,TCS L1,RPA L2,RPA,Automation Anywhere,Automation Anywhere,A360-v23,4,Cloud,Y,Client-to-Site,SSO Login,Business,,,1,SAP,,,,,1,per bot per year,per bot per year,,,
