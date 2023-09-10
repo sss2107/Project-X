@@ -1,0 +1,12 @@
+streamlit==1.19.0
+streamlit_extras
+openai
+loguru
+typer
+tiktoken==0.3.3
+chromadb==0.3.21
+langchain
+pexpect==4.8.0
+st_pages==0.4.1
+altair==4.2.2
+tabulate
