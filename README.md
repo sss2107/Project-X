@@ -1,6 +1,6 @@
 # Project-X
 
-Ask anything from Sahils resume. You can access the app via [this link](project-x-9wlx9tx4kmhumztacgcxhq.streamlit.app). 
+Ask anything from Sahils resume. You can access the app via this [link](project-x-9wlx9tx4kmhumztacgcxhq.streamlit.app).
 
 **Description:**
 
