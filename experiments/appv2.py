@@ -38,8 +38,8 @@ from common import (
 
 #There are other ways to mask the OpenAI key however, due to shortage of time, I'll embed the key in the code. Please don't use this anywhere else.
 #from config import API_KEY
-os.environ['OPENAI_API_KEY'] = 'e1ad721cd0fc4e5a89a8c67d1ce6e75d'
-# os.environ['GPT_API_KEY'] = 'e1ad721cd0fc4e5a89a8c67d1ce6e75d'
+os.environ['OPENAI_API_KEY'] = ''
+# os.environ['GPT_API_KEY'] = ''
 
 logger.remove()
 logger.add(sys.stderr, level="DEBUG")
