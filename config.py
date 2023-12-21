@@ -1,1 +1,1 @@
-API_KEY='e1ad721cd0fc4e5a89a8c67d1ce6e75d'
+API_KEY='your-openai-api-key'
