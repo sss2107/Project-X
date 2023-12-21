@@ -39,8 +39,8 @@ from common import (
     GPT_ANSWER_PREFIX,
 )
 
-os.environ['OPENAI_API_KEY'] = 'e1ad721cd0fc4e5a89a8c67d1ce6e75d'
-# os.environ['GPT_API_KEY'] = 'e1ad721cd0fc4e5a89a8c67d1ce6e75d'
+os.environ['OPENAI_API_KEY'] = ''
+# os.environ['GPT_API_KEY'] = ''
 
 logger.remove()
 logger.add(sys.stderr, level="DEBUG")
