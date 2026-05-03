@@ -1,30 +1,78 @@
 # Project-X
 
-Ask anything from Sahils resume. You can access the app via this [link](project-x-9wlx9tx4kmhumztacgcxhq.streamlit.app).
+A Streamlit question-answering app for asking questions about Sahil's resume. The app combines a FAISS vector index, LangChain retrieval, and Azure/OpenAI chat models to answer resume-related questions through a simple web interface.
 
-**Description:**
+## What This Project Shows
 
-The "Ask Anything from Sahil's Resume" Streamlit application is a powerful and efficient QA (Question-Answering) engine designed to assist hiring managers in quickly and accurately answering questions about Sahil's resume. Leveraging cutting-edge technologies like Langchain, OpenAI's ChatGPT, Faiss, and Streamlit Chat, this application streamlines the hiring process by providing detailed and precise responses to queries about Sahil's qualifications, experiences, and skills.
+- Building a resume Q&A assistant with retrieval augmented generation
+- Using FAISS for local vector search
+- Using Hugging Face embeddings for semantic retrieval
+- Wrapping the workflow in a Streamlit multi-page app
+- Storing resume data and generated vector indexes locally
 
-**Key Benefits:**
+## Tech Stack
 
-1. **Efficiency**: The application employs Faiss vector database to index Sahil's resume data, allowing for lightning-fast query retrieval. This ensures that hiring managers can find the information they need promptly, saving valuable time during the recruitment process.
+- Python
+- Streamlit
+- LangChain
+- FAISS
+- Hugging Face embeddings
+- Azure OpenAI / OpenAI-compatible chat models
+- pandas
 
-2. **Accurate Responses**: By utilizing the powerful mpnet embeddings from Huggingface and GPT-3.5 Turbo, the app is capable of not only responding to user queries but also refining them. It can even handle questions with no direct matches in the indexed data, making it exceptionally accurate in providing relevant answers.
+## Repository Structure
 
-3. **Customization**: The app can be easily adapted to work with different resumes and datasets. This flexibility allows organizations to streamline their hiring processes across various candidates, making it a valuable tool for HR departments.
+```text
+.
+├── Login.py                 # Streamlit entry page and lightweight user capture
+├── pages/
+│   └── QA Engine.py         # Main resume Q&A experience
+├── components/
+│   └── authentication.py
+├── data/
+│   ├── Sahil_Resume.pdf
+│   ├── v1.csv
+│   └── v2.xls
+├── faiss_index_sap/         # Local FAISS index files
+├── experiments/             # Earlier app and notebook experiments
+├── requirements.txt
+└── Dockerfile
+```
 
-4. **User-Friendly Interface**: The Streamlit interface provides an intuitive and user-friendly experience. Hiring managers can interact with the app effortlessly, ensuring that it can be adopted with minimal training or technical knowledge.
+## Run Locally
 
-5. **Scalability**: As the volume of resumes and hiring inquiries grows, the app's architecture can be scaled to accommodate increased demand, making it suitable for organizations of all sizes.
+```bash
+git clone https://github.com/sss2107/Project-X.git
+cd Project-X
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run Login.py
+```
 
-**Documentation:**
+## Configuration
 
-For comprehensive documentation and implementation details, please refer to this repo. The repository includes step-by-step instructions on setting up and running the application, including dependencies and configuration. Additionally, it provides examples and code snippets for developers looking to adapt the app for their own use cases.
+The app expects model and API configuration through the Python config files and environment. For a safer setup, keep API keys outside source code:
 
-Feel free to reach out to me or contribute to the development of this powerful QA engine. With "Ask Anything from (candidate) Resume," hiring managers can make informed decisions quickly and efficiently, enhancing the recruitment process and ultimately benefiting their organizations.
+```bash
+export OPENAI_API_KEY=...
+export AZURE_OPENAI_API_KEY=...
+```
 
+Then update the app code to read those values from `os.environ`.
 
+## Security Follow-Up
 
+This repository currently includes API-key style values in source files. Before deploying or sharing the app, rotate any exposed keys and replace hardcoded credentials with environment variables or a secret manager.
 
-![image](https://github.com/sss2107/Project-X/assets/91816583/4ac6d08e-7998-4fb7-837f-eb1ca42439a2)
+## Deployment Notes
+
+The repository includes a `Dockerfile`, so the app can be containerized after secrets and environment configuration are cleaned up. For hosted Streamlit deployments, make sure the FAISS index files and resume data are available in the runtime environment.
+
+## Improvement Ideas
+
+- Remove hardcoded credentials
+- Add a script for rebuilding the FAISS index from resume data
+- Add clearer configuration docs for Azure OpenAI deployments
+- Add sample questions and expected answer behavior
+- Add basic tests for retrieval and response formatting
